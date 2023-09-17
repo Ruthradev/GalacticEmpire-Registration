@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body{
+    background: #080808;
+    color: white;
+
+}
+
+  
+html{
+    scroll-behavior: smooth;
+}
+#darth{
+   font-weight: 700;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Vader_dstp_bkgrnd.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 7%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 240px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+   width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.header-text h1{
+    margin-top: 20px;
+    font-size: 35px;
+}
+.header-text h1 p{
+    font: bolder;
+
+}
+.jobroles{
+    padding: 12% 30px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.jrcol1{
+    flex-basis: 35%;
+}
+.jrcol1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.jrcol2{
+    flex-basis: 60%;
+}
+
+.titlestr{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    padding: 10px 0px
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tablinks{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tablinks::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.tablinks.active-link::after{
+    width: 100%;
+}
+
+.tabcontents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tabcontents ul li span{
+    color: red;
+    font-size: 14px;
+}
+
+.tabcontents{
+    display: none;
+}
+
+.tabcontents.active-content{
+    display: block;
+}
+
+
+
+/* Projects */
+
+#projects{
+    padding: 30px 0;
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project-list div{
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+#projecta{
+    color: skyblue;
+    font-weight: 500;
+}
+#deathstar{
+    background-image: url(images/Death\ Star.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#tiefighter{
+    background-image: url(images/tie\ fighters.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#medicalbase{
+    background-image: url(images/Medical\ base.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.project-list div p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.project-list div a{
+    text-decoration: none;
+    color: white;
+}
+
+.project-list div:hover{
+    transform: translateY(-10px);
+}
+
+/* Benefits */
+
+#benefits{
+    padding: 10px 0;
+}
+.benefits_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.benefits_provided{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.benefits_provided img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.benefits_provided {
+    position: relative; /* Make the container a positioning context */
+    text-align: center; /* Center the content horizontally */
+}
+
+.benefits_provided i{
+    position: absolute; /* Set the icon to absolute positioning */
+    top: 50%; /* Position it 50% from the top */
+    left: 50%; /* Position it 50% from the left */
+    transform: translate(-50%, -50%); 
+    font-size: 70px;/* Center it both horizontally and vertically */
+}
+
+.layer{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6 ), darkred);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.benefits_provided:hover img{
+    transform: scale(1.1);
+}
+
+.benefits_provided:hover .layer{
+    height: 100%;
+}
+
+.seemore{
+    display: block;
+    padding: 14px 50px;
+    margin: 20px auto;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    width: fit-content;
+    border: 1px solid darkred;
+    border-radius: 8px;
+    transition: background 0.5s;
+}
+
+.seemore:hover{
+    background: darkred;
+}
+
+/* Contact */
+
+.contact1{
+    flex-basis: 35%;
+}
+.contact2{
+    flex-basis: 60%;
+}
+
+.contact1 p{
+    margin-top: 30px;
+}
+
+.btn{
+    display: block;
+    padding: 14px 50px;
+    margin: 20px auto;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    width: fit-content;
+    border: 1px solid darkred;
+    border-radius: 8px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: darkred;
+}
+
+.subbtn{
+    display: block;
+    padding: 14px 50px;
+    background: #080808;
+    margin: 20px auto;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    width: fit-content;
+    border: 1px solid darkred;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.subbtn:hover{
+    background: darkred;
+}
+
+.socialicons{
+    margin-top: 30px;
+}
+.socialicons a{
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+    font-size: 30px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.socialicons a:hover{
+    transform: translateY(-5px);
+    color: darkred;
+}
+
+.contact2 form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    margin: 15px 0;
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.copyright{
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 15px;
+    opacity: 0.6;
+}
